@@ -1,4 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "framework": "vite"
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
