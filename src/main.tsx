@@ -1,5 +1,17 @@
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { RouterProvider } from "@tanstack/react-router";
+import { QueryClient } from "@tanstack/react-query";
+
+import { router } from "./router";
+
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
-  <h1>Ayomikun TV is working</h1>
+  <StrictMode>
+    <RouterProvider
+      router={router}
+      context={{ queryClient }}
+    />
+  </StrictMode>
 );
