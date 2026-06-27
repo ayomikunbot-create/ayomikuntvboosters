@@ -2,7 +2,6 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider } from "@tanstack/react-router";
 import { QueryClient } from "@tanstack/react-query";
-
 import "./styles.css";
 import { router } from "./router";
 
@@ -10,9 +9,6 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider
-      router={router}
-      context={{ queryClient }}
-    />
+    <RouterProvider router={router} context={{ queryClient }} />
   </StrictMode>
 );
